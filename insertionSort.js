@@ -10,3 +10,13 @@ function insertionSort(arr) {
   }
   return arr;
 }
+
+function insertionSort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let current = i;
+    while (current > 0 && arr[current] < arr[current - 1]) {
+      [arr[current], arr[current - 1]] = [arr[current - 1], arr[current]];
+    }
+  }
+  return arr;
+}
